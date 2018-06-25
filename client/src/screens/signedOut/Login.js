@@ -26,7 +26,8 @@ export default class Login extends Component {
   };
 
   onButtonPress = () => {
-    axios.post('http://192.168.0.19:4000/user/signin', {
+    console.log('login')
+    axios.post('http://user-tuitclone.roarized.com/user/signin', {
       username: this.state.username,
       password: this.state.password
     })
@@ -35,7 +36,7 @@ export default class Login extends Component {
         AsyncStorage.setItem('token', response.data.token);
         userStore.onSuccess();
         userStore.fetchDataOnSuccess(response.data.user);
-        twitStore.readOwnTwits(response.data.user._id)
+        twitStore.readOwnTwits(response.data.user._id);
       })
       .catch(err => {
         this.setState({

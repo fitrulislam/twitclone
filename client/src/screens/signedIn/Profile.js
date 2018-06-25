@@ -36,6 +36,7 @@ import twitStore from '../../store/twits';
         }
       }
     };
+    console.log('biar jalan', arr)
     return (
       <ScrollView>
         <View style={styles.container}>

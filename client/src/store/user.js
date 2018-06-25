@@ -35,7 +35,8 @@ class User {
 	};
 
 	fetchDataUser(token) {
-		axios.get('http://192.168.0.19:4000/user/oneuser', {
+		console.log('ambil data')
+		axios.get('http://user-tuitclone.roarized.com/user/oneuser', {
 			headers: {
 				token: token
 			}

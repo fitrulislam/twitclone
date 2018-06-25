@@ -11,9 +11,12 @@ export default class Search extends Component {
   _keyExtractor = (user) => user._id;
 
   render() {
+    { console.log('ambil data dari search') }
     return (
       <Query query={ GET_ALL_USERS }>
           {({ loading, error, data }) => {
+            console.log(data)
+            console.log(error)
             if (loading) return <Loading />
             if (error) return <Error />
             return (

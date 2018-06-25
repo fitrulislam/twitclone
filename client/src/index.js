@@ -25,6 +25,7 @@ import Error from './screens/others/Error';
         if(result === true) {
           AsyncStorage.getItem('token')
             .then(res => {
+              console.log('ambil data')
               userStore.onLoadSuccess();
               userStore.fetchDataUser(res);
               userStore.onSuccess();

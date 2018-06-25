@@ -31,9 +31,9 @@ export default class Login extends Component {
   };
 
   onButtonPress = () => {
-    console.log(this.state)
+    console.log('register')
     if(this.state.name !== '' && this.state.username !== '' && this.state.email !== '' && this.state.profile !== '' && this.state.password !== '') {
-      axios.post('http://192.168.0.19:4000/user/signup', {
+      axios.post('http://user-tuitclone.roarized.com/user/signup', {
       name: this.state.name,
       username: this.state.username,
       email: this.state.email,

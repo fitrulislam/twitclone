@@ -16,7 +16,7 @@ import userStore from '../../store/user';
   updatedFollow = (id) => {
     AsyncStorage.getItem('token')
       .then(res => {
-        axios.post('http://192.168.0.19:4000/user/following', {
+        axios.post('http://user-tuitclone.roarized.com/user/following', {
           followerId: id
         }, {
           headers: {
@@ -38,7 +38,7 @@ import userStore from '../../store/user';
   updatedUnfollow = (id) => {
     AsyncStorage.getItem('token')
       .then(res => {
-        axios.post('http://192.168.0.19:4000/user/unfollow', {
+        axios.post('http://user-tuitclone.roarized.com/user/unfollow', {
           followerId: id
         }, {
           headers: {

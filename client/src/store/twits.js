@@ -5,6 +5,7 @@ class Twits {
   @observable twits = [];
 
   readOwnTwits(userId) {
+    console.log('ambil data')
     db.ref(`user/${userId}`).on('value', (snapshot) => {
       if(snapshot.val()) {
         const rawPass = snapshot.val()
@@ -17,7 +18,6 @@ class Twits {
           }
         }
         this.twits = arr
-        console.log(arr)
       }
     })
   };

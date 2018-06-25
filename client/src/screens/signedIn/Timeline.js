@@ -20,6 +20,7 @@ import { db } from '../../store/firebase';
   };
 
   fetchData = () => {
+    console.log('fetch data nih')
     this.setState({
       twits: []
     })
@@ -28,7 +29,7 @@ import { db } from '../../store/firebase';
         if(result === true) {
           AsyncStorage.getItem('token')
             .then(res => {
-              axios.get('http://192.168.0.19:4000/user/oneuser', {
+              axios.get('http://user-tuitclone.roarized.com/user/oneuser', {
                 headers: {
                   token: res
                 }
@@ -114,6 +115,7 @@ import { db } from '../../store/firebase';
           }
         }
       };
+      console.log('biar jalan', arr)
       return (
         <View>
           <Text style={styles.title}>

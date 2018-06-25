@@ -1,4 +1,5 @@
 import React from 'react';
+import 'es6-symbol/implement';
 import { ApolloProvider } from "react-apollo";
 
 import Index from './src/index';

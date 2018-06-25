@@ -1,0 +1,22 @@
+type User {
+  _id: String
+  name: String,
+  username: String,
+  email: String,
+  profile: String,
+  password: String,
+}
+
+type Query {
+  users: [User]
+}
+
+type Message {
+  info: String
+}
+
+type Mutation {
+  deleteUser(
+    _id: String,
+  ): Message
+}
